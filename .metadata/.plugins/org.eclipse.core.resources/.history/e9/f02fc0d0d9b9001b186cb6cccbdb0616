@@ -1,0 +1,25 @@
+package com.work.view;
+
+public class ArrayTest1 {
+
+	public static void main(String[] args) {
+		//5명의 학생의 성적관리하는 프로그램 개발
+		//5명 성적 : 92, 85, 77, 98, 65
+		//배열을 자료 저장구조 사용
+		
+		/*
+		 * 
+		 * 
+		 */
+		
+		int[] score;
+		score = new int[5];
+		score[0] = 92;
+		score[1] = 85;
+		score[2] = 77;
+		score[3] = 98;
+		score[4] = 65;
+		System.out.println(score[4]);
+	}
+
+}
