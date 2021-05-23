@@ -1,0 +1,52 @@
+
+public class practice {
+
+	
+	public static void main(String[] args) {
+		
+//		main1();
+//		main2();
+		main3();
+	}
+	
+	public static void main3() {
+		
+		String[] name = {"홍길동", "강감한", "이순신", "김유신", "유관순"};
+		int[] score = {92, 85, 77, 98, 65};
+		
+		int total = 0;
+		int avg = 0;
+		
+		for (int i = 0; i < name.length; i++) {
+			System.out.println((i+1) + "번 " + name[i] + score[i]);
+	}	
+		
+	}
+	
+	
+	public static void main2() {
+		
+		String[] name = {"홍길동", "강감한", "이순신", "김유신", "유관순"};
+		for (int index = 0; index < name.length; index++) {
+			System.out.println((index + 1) + "번 : " + name[index]);
+		}
+	}
+	
+	
+	public static void main1() {
+		
+		// 배열연습_성적관리 평균과 총점 
+		int[] score = {92, 85, 77, 98, 65};
+		
+		int total = 0;
+		int avg = 0;
+		
+		for (int i = 0; i < score.length; i++) {
+			System.out.println((i + 1) + "번 : " + score[i]);
+			total += score[i];
+		}
+		avg = total / score.length;
+		System.out.println("총점 : " + total);
+		System.out.println("평균 : " + avg);
+	}
+}

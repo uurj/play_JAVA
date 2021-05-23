@@ -36,7 +36,7 @@ public class RandomTeamTest {
 			System.out.println("Usage: java RandomTeamTest 팀원숫자");
 			System.exit(0);
 		}
-		int teamLenth = Integer.parseInt(args[0]); // String 문자열타입의숫자데이터를 int 타입으로 변환
+		int teamLength = Integer.parseInt(args[0]); // String 문자열타입의숫자데이터를 int 타입으로 변환
 		
 		// 학생의 이름정보는 배열요소 30명 저장
 		
