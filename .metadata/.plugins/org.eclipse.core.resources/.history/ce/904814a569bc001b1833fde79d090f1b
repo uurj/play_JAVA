@@ -1,0 +1,9 @@
+package com.work.model.dto;
+
+public class StudentScore {
+
+	public String studentNo = "210517"; 
+	public String name; 
+	public int score; 
+	
+}

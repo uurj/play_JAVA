@@ -1,0 +1,12 @@
+package com.work.test;
+	
+/*
+ 
+ */
+
+public class MethodType {
+	public void doA() {
+		System.out.println("안녕");
+		
+	}
+}
