@@ -1,0 +1,14 @@
+package com.work.test;
+
+public class MethodTest {
+
+	public static void main(String[] args) {
+		//MethodType 객체를 test 참조변수로 선언 및 생성
+		MethodType test = new MethodType();
+		
+		for (int index = 0; index < 4; index++) {
+			test.doA();
+		}
+	}
+
+}

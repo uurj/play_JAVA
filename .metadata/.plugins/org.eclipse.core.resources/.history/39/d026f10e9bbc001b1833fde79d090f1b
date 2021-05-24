@@ -1,0 +1,14 @@
+package com.work.view;
+
+public class StudentTest {
+
+	public static void main(String[] args) {
+		Student park = new Student();
+		park.studentName = "박유정";
+		park.studentID = 123;
+		System.out.println(park.studentName);
+		System.out.println(park.studentID);
+		System.out.println(park.getStudentName());
+	}
+
+}

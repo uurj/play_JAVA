@@ -1,0 +1,19 @@
+package com.work.test;
+	
+/*
+ 
+ */
+
+public class MethodType {
+	
+	//1. 매개변수 없고, 반환타입 없음
+	public void doA() {
+		System.out.println("안녕");
+		
+	}
+	
+	//2. 매개변수 있고, 반환타입 없음
+	public void doB(String message) {
+		System.out.println(message);
+	}
+}

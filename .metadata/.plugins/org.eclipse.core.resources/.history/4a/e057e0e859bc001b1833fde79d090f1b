@@ -1,0 +1,21 @@
+package com.work.view;
+
+import com.work.model.dto.StudentScore;
+
+public class Test {
+
+	public static void main(String[] args) {
+		StudentScore dto = new StudentScore(); 
+		
+		//생성한 객체에 내 정보로 변경 
+		dto.studentNo = "201712011";
+		dto.name = "박유정";
+		dto.score = 100;
+
+		//생성한 객체의 정보 출력 
+		System.out.println(dto.studentNo);
+		System.out.println(dto.name);
+		System.out.println(dto.score);
+	}
+
+}
