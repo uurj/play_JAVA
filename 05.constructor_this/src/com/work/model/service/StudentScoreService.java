@@ -74,24 +74,24 @@ public class StudentScoreService {
 	 * @param score 성적
 	 */
 	public void addStudentScore(String studentNo, String name, int score) {
-//		if (count == students.length) {
-//			extendStudents(10);
-//			System.out.println("학생들의 자료저장구조를 추가 확장하였습니다.");
-//		} 
-//		
-//		StudentScore dto = new StudentScore();
-//		dto.studentNo = studentNo;
-//		dto.name = name;
-//		dto.score = score;
-//
-//		students[count++] = dto;
+		if (count == students.length) {
+			extendStudents(10);
+			System.out.println("학생들의 자료저장구조를 추가 확장하였습니다.");
+		} 
 		
 		StudentScore dto = new StudentScore();
 		dto.studentNo = studentNo;
 		dto.name = name;
 		dto.score = score;
+
+		students[count++] = dto;
 		
-		addStudentScore(dto);
+//		StudentScore dto = new StudentScore();
+//		dto.studentNo = studentNo;
+//		dto.name = name;
+//		dto.score = score;
+//		
+//		addStudentScore(dto);
 	}
 	
 	/**

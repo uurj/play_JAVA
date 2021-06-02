@@ -14,11 +14,15 @@ import com.work.model.dto.Member;
 
 public class MemberServiceArray {
 	
-	
+	/**
+	 * 회원들을 관리하기 위한 자료저장구조 : 배열의 다형성 반영
+	 */
 	private Member[] members = new Member [10];
 	
 	/** 등록인원수 및 등록될 배열요소 위치 정보 */
 	private int count;
+	
+	//아이디중복조회
 	
 	
 	/** 
@@ -28,7 +32,6 @@ public class MemberServiceArray {
 	public int getCount() {
 		return count;
 	}
-	
 	
 	
 	/**
@@ -77,7 +80,18 @@ public class MemberServiceArray {
 		return -1; 
 	}
 	
-	
+//	/**
+//	 * 아이디 중복조회
+//	 * @param memberID 아이디 
+//	 */
+//	public void searchduplicateID(String memberID) { 
+//		for (int index = 0; index < count; index++) {
+//			if(members[index].getMemberID().equals(memberID)) { 
+//				System.out.println(memberID + "는 중복된 아이디입니다.");
+//				}
+//		System.out.println(memberID + "는 중복되지 않는 아이디입니다.");
+//		}
+//	}
 	
 	/**
 	 * 배열구조 추가 확장해서 기존 저장정보 이동 처리

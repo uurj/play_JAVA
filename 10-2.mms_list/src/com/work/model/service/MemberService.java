@@ -13,7 +13,6 @@ import com.work.util.Utility;
  * -- ArrayList
  * 
  * @author ParkYuJung
- * @since 1.8
  *
  */
 public class MemberService {
@@ -24,15 +23,14 @@ public class MemberService {
 	/** 기본생성자 : 초기화 회원 등록 수행 */
 	public MemberService() {
 //		int count = initMember();
-		System.out.println("초기화회원 등록작업이 완료되었습니다. : " + initMember());
+//		System.out.println("초기화회원 등록작업이 완료되었습니다. : " + initMember());
 	}
-	
 	
 	/**
 	 * 회원 탈퇴
 	 * @param memberID 아이디
 	 * @param memberPw 비밀번호 
-	 * @return 성공시 탍퇴회원의 기존정보, 실패시 null
+	 * @return 성공시 탈퇴회원의 기존정보, 실패시 null
 	 */
 	public Member removeMember(String memberID, String memberPw) {
 		int index = exist(memberID);  // 객체가아닌 도메인으로
@@ -48,7 +46,7 @@ public class MemberService {
 		return null;
 	}
 	
-	// 아이디만 비교하고 삭제하는거 
+	// (탈퇴) 아이디만 비교하고 탈퇴하는거 
 	public Member removeMember(String memberID) {
 		int index = exist(memberID);  // 객체가아닌 도메인으로
 		if (index >= 0) {
@@ -109,8 +107,6 @@ public class MemberService {
 	
 	/**
 	 * 회원 등록
-	 * -- 사용자 입력 데이터 : 아이디, 비밀번호, 이름, 휴대폰, 이메일
-	 * -- 시스템 최초 가입시 일반회원 가입처리 : 가입일, 등급, [마일리지]
 	 * @param dto 등록 회원 
 	 */
 	public void addMember(Member dto) {
@@ -141,7 +137,7 @@ public class MemberService {
 		
 		
 	}
-	
+
 	/**
 	 * 회원 존재 유무 조회
 	 * @param memberID 아이디
@@ -150,11 +146,11 @@ public class MemberService {
 	public int exist(String memberID) {
 		// jdk1.4
 		for (int index = 0; index < list.size(); index++) {  
-			Object obj = list.get(index);	// obj는 리스트가져오는 인덱스로 정의
-			if (obj instanceof Member) {	// 만약 obj가 Member를 참조하고 있다면
-				Member dto = (Member)obj;	// dto와 obj는 같다
-				if (dto.getMemberID().equals(memberID)) { 	// 만약 dto아이디와 obj가같다면
-					return index; 	// 인덱스번호 반환해라
+			Object obj = list.get(index);	
+			if (obj instanceof Member) {	
+				Member dto = (Member)obj;	
+				if (dto.getMemberID().equals(memberID)) { 	
+					return index; 	
 					}
 				}
 			} return -1;
@@ -194,4 +190,9 @@ public class MemberService {
 		
 		return null;
 	}
+	
+//	/** 아이디중복조회 */
+//	public Member searchduplicateID(String string) {
+//		return null;
+//	}
 }
